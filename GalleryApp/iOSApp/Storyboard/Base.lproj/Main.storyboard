@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jF4-oJ-Zav">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" title="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginVC" customModule="GalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="449-3t-SED">
+                                <rect key="frame" x="97.666666666666686" y="405.66666666666669" width="198" height="41"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Continue With Google">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onBtnGoogleSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ba5-xg-kjD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3S-aW-zTq">
+                                <rect key="frame" x="196.66666666666666" y="486.66666666666669" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="k3S-aW-zTq" secondAttribute="trailing" constant="16" id="0k9-Vb-S6J"/>
+                            <constraint firstItem="k3S-aW-zTq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1dr-0X-z97"/>
+                            <constraint firstItem="449-3t-SED" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RfM-hF-tS9"/>
+                            <constraint firstItem="449-3t-SED" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="41:852" id="U93-Aj-fXz"/>
+                            <constraint firstItem="449-3t-SED" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yc7-Aa-fNo"/>
+                            <constraint firstItem="k3S-aW-zTq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zeb-dc-szM"/>
+                            <constraint firstItem="k3S-aW-zTq" firstAttribute="top" secondItem="449-3t-SED" secondAttribute="bottom" constant="40" id="ism-Lf-GGU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JBU-vh-TtO"/>
+                    <connections>
+                        <outlet property="btnGoogleSignIn" destination="449-3t-SED" id="zXE-XA-drh"/>
+                        <outlet property="lblMessage" destination="k3S-aW-zTq" id="k9W-in-Ugf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849.61832061068696" y="3.5211267605633805"/>
+        </scene>
+        <!--Photo GalleryVC-->
+        <scene sceneID="tW8-Cx-6SC">
+            <objects>
+                <viewController storyboardIdentifier="PhotoGalleryVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HK1-RB-99T" customClass="PhotoGalleryVC" customModule="GalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A4J-5C-7hE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kXZ-zw-m12">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="t9I-jv-sp0">
+                                <rect key="frame" x="138.66666666666666" y="768" width="115.66666666666666" height="26"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemBlueColor"/>
+                            </pageControl>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ysp-jp-RyD">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K0K-GD-qJR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ysp-jp-RyD" firstAttribute="centerX" secondItem="A4J-5C-7hE" secondAttribute="centerX" id="L93-Yr-Dqh"/>
+                            <constraint firstItem="t9I-jv-sp0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K0K-GD-qJR" secondAttribute="leading" constant="40" id="Nqe-7F-dNJ"/>
+                            <constraint firstItem="ysp-jp-RyD" firstAttribute="centerY" secondItem="A4J-5C-7hE" secondAttribute="centerY" id="Pz0-Ua-1eT"/>
+                            <constraint firstItem="K0K-GD-qJR" firstAttribute="bottom" secondItem="t9I-jv-sp0" secondAttribute="bottom" constant="24" id="Rlm-If-imZ"/>
+                            <constraint firstAttribute="trailing" secondItem="kXZ-zw-m12" secondAttribute="trailing" id="WE2-wQ-K16"/>
+                            <constraint firstItem="kXZ-zw-m12" firstAttribute="top" secondItem="A4J-5C-7hE" secondAttribute="top" id="Xh5-hd-mfq"/>
+                            <constraint firstItem="t9I-jv-sp0" firstAttribute="centerX" secondItem="A4J-5C-7hE" secondAttribute="centerX" id="apV-iC-Yue"/>
+                            <constraint firstAttribute="bottom" secondItem="kXZ-zw-m12" secondAttribute="bottom" id="c49-0t-BsP"/>
+                            <constraint firstItem="kXZ-zw-m12" firstAttribute="leading" secondItem="A4J-5C-7hE" secondAttribute="leading" id="rHf-62-fl9"/>
+                            <constraint firstItem="K0K-GD-qJR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t9I-jv-sp0" secondAttribute="trailing" constant="40" id="rO5-Y8-1zi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ysp-jp-RyD" id="Ant-hj-Bg3"/>
+                        <outlet property="imageView" destination="kXZ-zw-m12" id="I9K-Ft-nEz"/>
+                        <outlet property="pageControl" destination="t9I-jv-sp0" id="5FM-5h-XRB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Jp-44-vG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XK5-Rt-d6M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jF4-oJ-Zav" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FWE-MN-lmm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9ND-Wi-RWe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZO-TZ-iHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-77.099236641221367" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
